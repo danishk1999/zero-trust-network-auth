@@ -45,8 +45,7 @@ devices, and traffic within the client's network.
 - IPSec encryption between network segments
 
 ## 📄 Report
-The full project report is included in this repository:  
-[`Zero_Trust_Final_Report.pdf`](./Zero_Trust_Final_Report.pdf)
+The full project report is included in this repository
 
 ## Note
 This project was completed in a controlled lab environment using virtualized 
