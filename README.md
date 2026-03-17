@@ -1,35 +1,53 @@
 # 🔐 Zero Trust Network Authentication
 **Course:** CMPT 480 — Computer Network Security  
+**Date:** August 2024  
 **Client:** Universal Rail Systems (Work Integrated Learning Project)  
-**Status:** ✅ Completed
+**Status:** ✅ Completed  
+**Team:** Aidan Mark, Danish Kumar, Mohammad Mohammad, Mahmoud Modo
 
 ## Overview
-Designed and implemented a Zero Trust security architecture for a real-world client 
-using enterprise-grade virtualization and authentication technologies.
+Designed and implemented a Zero Trust Architecture (ZTA) for a real-world client 
+— Universal Rail Systems — as part of a work-integrated learning project. The 
+solution enforces the principle of "never trust, always verify" across all users, 
+devices, and traffic within the client's network.
+
+## My Contributions
+- Designed the network topology and virtual infrastructure layout
+- Configured Proxmox VE virtualization environment and VyOS router
+- Set up Active Directory (AD) Domain Controller and Certificate Authority (CA)
+- Implemented mTLS authentication across servers
+- Documented configuration steps and security recommendations
 
 ## Technologies Used
-- Proxmox Virtual Environment
-- Windows Active Directory (AD)
-- File & Print Server
-- SQL Server
-- TLS Authentication
-- Virtual Networking
+- Proxmox VE (Virtualization)
+- VyOS Router
+- Windows Server 2022
+- Active Directory & Certificate Authority (AD CS)
+- Mutual TLS (mTLS)
+- IIS Reverse Proxy
+- SQL Server with forced encryption
+- Remote Desktop Protocol (RDP) with certificate-based auth
+- VLAN Segmentation & Firewall Rules
+- IPSec
 
-## What Was Built
-- Designed full network topology for client environment
-- Set up virtual network infrastructure using Proxmox
-- Configured Active Directory with user accounts and group policies
-- Deployed File/Print Server and SQL Server
-- Secured all communications using TLS authentication
-- Implemented Zero Trust principles — no implicit trust, verify everything
+## Architecture Highlights
+- **Network Topology:** Segmented internal network (192.168.1.0/24) with DMZ
+- **4 Virtualized Servers:** Active Directory, File/Print Server, SQL Server, Application Server
+- **Certificate-Based Auth:** Enterprise Root CA issues certs to all domain-joined devices
+- **Zero Trust Principles Applied:** Least privilege, micro-segmentation, continuous monitoring, MFA
 
-## Key Learnings
-- Enterprise network design and virtualization
-- Active Directory configuration and management
-- TLS/SSL implementation for secure communications
-- Zero Trust security model principles and real-world application
-- Working with a real client in a professional environment
+## Key Security Implementations
+- Mutual TLS (mTLS) for all server-to-server communication
+- Role-Based Access Control (RBAC) via Active Directory
+- VLAN isolation for printers and DMZ
+- Firewall rules restricting traffic to essential ports only
+- Secure RDP with Group Policy hardening
+- IPSec encryption between network segments
+
+## 📄 Report
+The full project report is included in this repository:  
+[`Zero_Trust_Final_Report.pdf`](./Zero_Trust_Final_Report.pdf)
 
 ## Note
-Client-specific configuration details are not included in this repository 
-to protect confidentiality of Universal Rail Systems.
+This project was completed in a controlled lab environment using virtualized 
+infrastructure. No real client data or production systems are included in this repository.
